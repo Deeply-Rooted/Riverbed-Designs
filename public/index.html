@@ -7,15 +7,14 @@
   <meta name="description" content="Durable, high-speed mobile signboards, custom digital storefronts, and hands-off web management for independent operators across the United States.">
   <style>
     :root {
-      --fog-bg: #ECEFF1;
-      --fog-surface: #F5F7F8;
-      --fog-border: #CFD8DC;
-      --river-dark: #1C252C;
-      --river-slate: #37474F;
-      --river-muted: #546E7A;
-      --river-accent: #263238;
-      --gold-stone: #C5A059;
-      --gold-hover: #B08D46;
+      --sand-bg: #F4F1EA;
+      --card-bg: #FFFFFF;
+      --driftwood-border: #D8D2C4;
+      --river-midnight: #0F1D2A;
+      --teal-mist: #4A6D7C;
+      --river-gold: #D4A017;
+      --gold-hover: #B8890E;
+      --text-muted: #5A6B75;
       --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
@@ -26,8 +25,8 @@
     }
 
     body {
-      background-color: var(--fog-bg);
-      color: var(--river-dark);
+      background-color: var(--sand-bg);
+      color: var(--river-midnight);
       font-family: var(--font-stack);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -41,47 +40,48 @@
 
     /* Top Strip */
     .top-strip {
-      background-color: var(--river-dark);
-      color: var(--fog-surface);
+      background-color: var(--river-midnight);
+      color: var(--sand-bg);
       text-align: center;
       padding: 0.65rem 1rem;
       font-size: 0.85rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700;
+      border-bottom: 2px solid var(--river-gold);
     }
 
     /* Header / Hero */
     header {
       padding: 4.5rem 0 3.5rem;
       text-align: center;
-      background: linear-gradient(180deg, #E2E7EA 0%, var(--fog-bg) 100%);
-      border-bottom: 1px solid var(--fog-border);
+      background: linear-gradient(180deg, #EAE6DC 0%, var(--sand-bg) 100%);
+      border-bottom: 1px solid var(--driftwood-border);
     }
 
     .brand-tag {
       display: inline-block;
       font-size: 0.82rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--river-muted);
+      color: var(--teal-mist);
       margin-bottom: 0.75rem;
     }
 
     h1 {
-      font-size: 2.75rem;
+      font-size: 2.85rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      color: var(--river-dark);
+      color: var(--river-midnight);
       margin-bottom: 1rem;
     }
 
     .hero-lead {
-      max-width: 650px;
+      max-width: 660px;
       margin: 0 auto 2.25rem;
       font-size: 1.15rem;
-      color: var(--river-slate);
+      color: var(--teal-mist);
     }
 
     .btn-group {
@@ -105,36 +105,36 @@
     }
 
     .btn-primary {
-      background-color: var(--river-dark);
-      color: #FFFFFF;
-      border: 1px solid var(--river-dark);
+      background-color: var(--river-gold);
+      color: var(--river-midnight);
+      border: 1px solid var(--river-gold);
     }
 
     .btn-primary:hover {
-      background-color: var(--river-slate);
-      border-color: var(--river-slate);
+      background-color: var(--gold-hover);
+      border-color: var(--gold-hover);
     }
 
     .btn-secondary {
       background-color: transparent;
-      color: var(--river-dark);
-      border: 1px solid var(--river-slate);
+      color: var(--river-midnight);
+      border: 1px solid var(--river-midnight);
     }
 
     .btn-secondary:hover {
-      background-color: var(--fog-surface);
+      background-color: #E6E1D5;
     }
 
     /* Sections */
     section {
       padding: 4rem 0;
-      border-bottom: 1px solid var(--fog-border);
+      border-bottom: 1px solid var(--driftwood-border);
     }
 
     .section-title {
-      font-size: 1.9rem;
+      font-size: 1.95rem;
       font-weight: 800;
-      color: var(--river-dark);
+      color: var(--river-midnight);
       text-align: center;
       margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
@@ -142,7 +142,7 @@
 
     .section-subtitle {
       text-align: center;
-      color: var(--river-muted);
+      color: var(--text-muted);
       margin-bottom: 2.75rem;
       font-size: 1rem;
     }
@@ -155,24 +155,25 @@
     }
 
     .feature-card {
-      background-color: var(--fog-surface);
-      border: 1px solid var(--fog-border);
+      background-color: var(--card-bg);
+      border: 1px solid var(--driftwood-border);
       border-radius: 6px;
       padding: 2rem 1.75rem;
+      border-top: 3px solid var(--teal-mist);
     }
 
     .feature-card h3 {
-      font-size: 1.2rem;
-      color: var(--river-dark);
+      font-size: 1.25rem;
+      color: var(--river-midnight);
       margin-bottom: 0.75rem;
     }
 
     .feature-card p {
-      color: var(--river-slate);
+      color: var(--text-muted);
       font-size: 0.95rem;
     }
 
-    /* Packages Grid (No public prices) */
+    /* Packages Grid */
     .package-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -180,8 +181,8 @@
     }
 
     .package-card {
-      background-color: var(--fog-surface);
-      border: 1px solid var(--fog-border);
+      background-color: var(--card-bg);
+      border: 1px solid var(--driftwood-border);
       border-radius: 6px;
       padding: 2rem 1.5rem;
       display: flex;
@@ -190,7 +191,8 @@
     }
 
     .package-card.highlight {
-      border: 2px solid var(--river-dark);
+      border: 2px solid var(--river-gold);
+      box-shadow: 0 4px 12px rgba(15, 29, 42, 0.05);
     }
 
     .package-tag {
@@ -198,24 +200,24 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--gold-stone);
+      color: var(--river-gold);
       margin-bottom: 0.5rem;
     }
 
     .package-name {
       font-size: 1.25rem;
       font-weight: 800;
-      color: var(--river-dark);
+      color: var(--river-midnight);
       margin-bottom: 0.5rem;
     }
 
     .package-notice {
       font-size: 0.85rem;
       font-style: italic;
-      color: var(--river-muted);
+      color: var(--teal-mist);
       margin-bottom: 1.25rem;
       padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--fog-border);
+      border-bottom: 1px solid var(--driftwood-border);
     }
 
     .package-features {
@@ -226,7 +228,7 @@
 
     .package-features li {
       font-size: 0.88rem;
-      color: var(--river-slate);
+      color: var(--river-midnight);
       margin-bottom: 0.65rem;
       padding-left: 1.25rem;
       position: relative;
@@ -236,7 +238,7 @@
       content: "•";
       position: absolute;
       left: 0;
-      color: var(--gold-stone);
+      color: var(--river-gold);
       font-size: 1.2rem;
       line-height: 1;
     }
@@ -247,7 +249,7 @@
       padding: 0.65rem 1rem;
       font-size: 0.88rem;
       font-weight: 700;
-      background-color: var(--river-dark);
+      background-color: var(--river-midnight);
       color: #FFFFFF;
       text-decoration: none;
       border-radius: 4px;
@@ -255,32 +257,35 @@
     }
 
     .inquire-link:hover {
-      background-color: var(--river-slate);
+      background-color: var(--teal-mist);
     }
 
     /* Policy / Care Note */
     .care-box {
       margin-top: 2rem;
       padding: 1.75rem;
-      background-color: var(--fog-surface);
-      border-left: 4px solid var(--gold-stone);
+      background-color: var(--card-bg);
+      border-left: 4px solid var(--river-gold);
       border-radius: 0 6px 6px 0;
+      border-top: 1px solid var(--driftwood-border);
+      border-right: 1px solid var(--driftwood-border);
+      border-bottom: 1px solid var(--driftwood-border);
     }
 
     .care-box h4 {
       font-size: 1.05rem;
-      color: var(--river-dark);
+      color: var(--river-midnight);
       margin-bottom: 0.5rem;
     }
 
     .care-box p {
       font-size: 0.92rem;
-      color: var(--river-slate);
+      color: var(--text-muted);
     }
 
     /* Contact Section */
     .contact-section {
-      background-color: var(--fog-surface);
+      background-color: #EAE6DC;
       text-align: center;
       padding: 4.5rem 0;
     }
@@ -288,10 +293,11 @@
     .contact-card {
       max-width: 580px;
       margin: 0 auto;
-      background: #FFFFFF;
-      border: 1px solid var(--fog-border);
+      background: var(--card-bg);
+      border: 1px solid var(--driftwood-border);
       border-radius: 6px;
       padding: 2.5rem 2rem;
+      box-shadow: 0 4px 12px rgba(15, 29, 42, 0.04);
     }
 
     .contact-methods {
@@ -306,39 +312,42 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 1rem;
-      border: 1px solid var(--fog-border);
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--driftwood-border);
       border-radius: 4px;
       font-size: 0.95rem;
+      background-color: var(--sand-bg);
     }
 
     .contact-label {
       font-weight: 700;
-      color: var(--river-dark);
+      color: var(--river-midnight);
     }
 
     .contact-action {
-      color: var(--river-slate);
+      color: var(--teal-mist);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .contact-action:hover {
-      color: var(--gold-stone);
+      color: var(--river-gold);
     }
 
     /* Footer */
     footer {
+      background-color: var(--river-midnight);
+      color: #9FAEB5;
       padding: 3rem 0;
       text-align: center;
       font-size: 0.85rem;
-      color: var(--river-muted);
     }
 
     .footer-brand {
-      color: var(--river-dark);
+      color: #FFFFFF;
       font-weight: 700;
       margin-bottom: 0.25rem;
+      font-size: 1rem;
     }
 
     @media (max-width: 768px) {
@@ -457,7 +466,7 @@
               <li>Full Google Business Profile setup &amp; optimization</li>
               <li>Direct photo publication to Google Maps listings</li>
               <li>Seasonal posts and announcements to search results</li>
-              <li>Review response guidance &amp; listing monitoring</li>
+              <li>Review response monitoring &amp; guidance</li>
               <li>Discounted rates for new inventory additions</li>
             </ul>
             <a href="#contact" class="inquire-link">Inquire for Pricing</a>
@@ -477,23 +486,23 @@
     <section id="contact" class="contact-section">
       <div class="container">
         <div class="contact-card">
-          <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--river-dark);">Get in Touch</h2>
-          <p style="color: var(--river-muted); font-size: 0.95rem;">
-            Have a project in mind or need a custom quote? Reach out directly by phone or email.
+          <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem; color: var(--river-midnight);">Get in Touch</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Have a project in mind or need a custom quote? Reach out directly by phone, text, or email.
           </p>
 
           <div class="contact-methods">
             <div class="contact-item">
               <span class="contact-label">Email Inquiries:</span>
-              <a href="mailto:info@riverbeddesigns.com" class="contact-action">info@riverbeddesigns.com</a>
+              <a href="mailto:deeplyrootedriverbeddesigns@gmail.com" class="contact-action">deeplyrootedriverbeddesigns@gmail.com</a>
             </div>
             <div class="contact-item">
-              <span class="contact-label">Phone &amp; Text:</span>
-              <a href="tel:15550000000" class="contact-action">(555) 000-0000</a>
+              <span class="contact-label">Call or Text:</span>
+              <a href="tel:7076797975" class="contact-action">(707) 679-7975</a>
             </div>
             <div class="contact-item">
               <span class="contact-label">Updates Accepted Via:</span>
-              <span style="color: var(--river-slate); font-weight: 600;">Email &bull; Call &bull; Text</span>
+              <span style="color: var(--river-midnight); font-weight: 700;">Email &bull; Call &bull; Text</span>
             </div>
           </div>
         </div>
@@ -505,7 +514,7 @@
     <div class="container">
       <div class="footer-brand">Riverbed Designs</div>
       <p>An Initiative of Deeply Rooted Enterprises</p>
-      <p style="margin-top: 0.4rem; font-size: 0.8rem;">
+      <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #8FA3AD;">
         Durable Web Infrastructure &bull; Nationwide Client Services &bull; Delivered Electronically
       </p>
     </div>
@@ -513,4 +522,4 @@
 
 </body>
 </html>
-     
+    
