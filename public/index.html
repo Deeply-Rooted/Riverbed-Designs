@@ -7,14 +7,14 @@
   <meta name="description" content="Durable, high-speed mobile signboards, custom digital storefronts, and hands-off web management for independent operators across the United States.">
   <style>
     :root {
-      --sand-bg: #F4F1EA;
-      --card-bg: #FFFFFF;
-      --driftwood-border: #D8D2C4;
-      --river-midnight: #0F1D2A;
-      --teal-mist: #4A6D7C;
-      --river-gold: #D4A017;
-      --gold-hover: #B8890E;
-      --text-muted: #5A6B75;
+      --fog-bg: #E3E8EC;
+      --card-bg: #D5DEE5;
+      --card-border: #BAC7D1;
+      --river-stone: #16222A;
+      --river-slate: #2B3A44;
+      --spruce-teal: #2E636A;
+      --spruce-hover: #1F454A;
+      --text-muted: #536471;
       --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
@@ -25,8 +25,8 @@
     }
 
     body {
-      background-color: var(--sand-bg);
-      color: var(--river-midnight);
+      background-color: var(--fog-bg);
+      color: var(--river-stone);
       font-family: var(--font-stack);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -40,23 +40,23 @@
 
     /* Top Strip */
     .top-strip {
-      background-color: var(--river-midnight);
-      color: var(--sand-bg);
+      background-color: var(--river-stone);
+      color: var(--fog-bg);
       text-align: center;
       padding: 0.65rem 1rem;
       font-size: 0.85rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-weight: 700;
-      border-bottom: 2px solid var(--river-gold);
+      border-bottom: 2px solid var(--spruce-teal);
     }
 
     /* Header / Hero */
     header {
       padding: 4.5rem 0 3.5rem;
       text-align: center;
-      background: linear-gradient(180deg, #EAE6DC 0%, var(--sand-bg) 100%);
-      border-bottom: 1px solid var(--driftwood-border);
+      background: linear-gradient(180deg, #CBD5DC 0%, var(--fog-bg) 100%);
+      border-bottom: 1px solid var(--card-border);
     }
 
     .brand-tag {
@@ -65,7 +65,7 @@
       font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--teal-mist);
+      color: var(--spruce-teal);
       margin-bottom: 0.75rem;
     }
 
@@ -73,7 +73,7 @@
       font-size: 2.85rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      color: var(--river-midnight);
+      color: var(--river-stone);
       margin-bottom: 1rem;
     }
 
@@ -81,7 +81,7 @@
       max-width: 660px;
       margin: 0 auto 2.25rem;
       font-size: 1.15rem;
-      color: var(--teal-mist);
+      color: var(--river-slate);
     }
 
     .btn-group {
@@ -105,36 +105,36 @@
     }
 
     .btn-primary {
-      background-color: var(--river-gold);
-      color: var(--river-midnight);
-      border: 1px solid var(--river-gold);
+      background-color: var(--spruce-teal);
+      color: #FFFFFF;
+      border: 1px solid var(--spruce-teal);
     }
 
     .btn-primary:hover {
-      background-color: var(--gold-hover);
-      border-color: var(--gold-hover);
+      background-color: var(--spruce-hover);
+      border-color: var(--spruce-hover);
     }
 
     .btn-secondary {
       background-color: transparent;
-      color: var(--river-midnight);
-      border: 1px solid var(--river-midnight);
+      color: var(--river-stone);
+      border: 1px solid var(--river-stone);
     }
 
     .btn-secondary:hover {
-      background-color: #E6E1D5;
+      background-color: #D0D9E0;
     }
 
     /* Sections */
     section {
       padding: 4rem 0;
-      border-bottom: 1px solid var(--driftwood-border);
+      border-bottom: 1px solid var(--card-border);
     }
 
     .section-title {
       font-size: 1.95rem;
       font-weight: 800;
-      color: var(--river-midnight);
+      color: var(--river-stone);
       text-align: center;
       margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
@@ -156,20 +156,20 @@
 
     .feature-card {
       background-color: var(--card-bg);
-      border: 1px solid var(--driftwood-border);
+      border: 1px solid var(--card-border);
       border-radius: 6px;
       padding: 2rem 1.75rem;
-      border-top: 3px solid var(--teal-mist);
+      border-top: 3px solid var(--spruce-teal);
     }
 
     .feature-card h3 {
       font-size: 1.25rem;
-      color: var(--river-midnight);
+      color: var(--river-stone);
       margin-bottom: 0.75rem;
     }
 
     .feature-card p {
-      color: var(--text-muted);
+      color: var(--river-slate);
       font-size: 0.95rem;
     }
 
@@ -182,7 +182,7 @@
 
     .package-card {
       background-color: var(--card-bg);
-      border: 1px solid var(--driftwood-border);
+      border: 1px solid var(--card-border);
       border-radius: 6px;
       padding: 2rem 1.5rem;
       display: flex;
@@ -191,8 +191,8 @@
     }
 
     .package-card.highlight {
-      border: 2px solid var(--river-gold);
-      box-shadow: 0 4px 12px rgba(15, 29, 42, 0.05);
+      border: 2px solid var(--spruce-teal);
+      box-shadow: 0 4px 12px rgba(22, 34, 42, 0.08);
     }
 
     .package-tag {
@@ -200,24 +200,24 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--river-gold);
+      color: var(--spruce-teal);
       margin-bottom: 0.5rem;
     }
 
     .package-name {
       font-size: 1.25rem;
       font-weight: 800;
-      color: var(--river-midnight);
+      color: var(--river-stone);
       margin-bottom: 0.5rem;
     }
 
     .package-notice {
       font-size: 0.85rem;
       font-style: italic;
-      color: var(--teal-mist);
+      color: var(--river-slate);
       margin-bottom: 1.25rem;
       padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--driftwood-border);
+      border-bottom: 1px solid var(--card-border);
     }
 
     .package-features {
@@ -228,7 +228,7 @@
 
     .package-features li {
       font-size: 0.88rem;
-      color: var(--river-midnight);
+      color: var(--river-stone);
       margin-bottom: 0.65rem;
       padding-left: 1.25rem;
       position: relative;
@@ -238,7 +238,7 @@
       content: "•";
       position: absolute;
       left: 0;
-      color: var(--river-gold);
+      color: var(--spruce-teal);
       font-size: 1.2rem;
       line-height: 1;
     }
@@ -249,7 +249,7 @@
       padding: 0.65rem 1rem;
       font-size: 0.88rem;
       font-weight: 700;
-      background-color: var(--river-midnight);
+      background-color: var(--spruce-teal);
       color: #FFFFFF;
       text-decoration: none;
       border-radius: 4px;
@@ -257,7 +257,7 @@
     }
 
     .inquire-link:hover {
-      background-color: var(--teal-mist);
+      background-color: var(--spruce-hover);
     }
 
     /* Policy / Care Note */
@@ -265,27 +265,27 @@
       margin-top: 2rem;
       padding: 1.75rem;
       background-color: var(--card-bg);
-      border-left: 4px solid var(--river-gold);
+      border-left: 4px solid var(--spruce-teal);
       border-radius: 0 6px 6px 0;
-      border-top: 1px solid var(--driftwood-border);
-      border-right: 1px solid var(--driftwood-border);
-      border-bottom: 1px solid var(--driftwood-border);
+      border-top: 1px solid var(--card-border);
+      border-right: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
     }
 
     .care-box h4 {
       font-size: 1.05rem;
-      color: var(--river-midnight);
+      color: var(--river-stone);
       margin-bottom: 0.5rem;
     }
 
     .care-box p {
       font-size: 0.92rem;
-      color: var(--text-muted);
+      color: var(--river-slate);
     }
 
     /* Contact Section */
     .contact-section {
-      background-color: #EAE6DC;
+      background-color: #D9E1E7;
       text-align: center;
       padding: 4.5rem 0;
     }
@@ -294,10 +294,10 @@
       max-width: 580px;
       margin: 0 auto;
       background: var(--card-bg);
-      border: 1px solid var(--driftwood-border);
+      border: 1px solid var(--card-border);
       border-radius: 6px;
       padding: 2.5rem 2rem;
-      box-shadow: 0 4px 12px rgba(15, 29, 42, 0.04);
+      box-shadow: 0 4px 12px rgba(22, 34, 42, 0.06);
     }
 
     .contact-methods {
@@ -313,31 +313,32 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1rem;
-      border: 1px solid var(--driftwood-border);
+      border: 1px solid var(--card-border);
       border-radius: 4px;
       font-size: 0.95rem;
-      background-color: var(--sand-bg);
+      background-color: var(--fog-bg);
     }
 
     .contact-label {
       font-weight: 700;
-      color: var(--river-midnight);
+      color: var(--river-stone);
     }
 
     .contact-action {
-      color: var(--teal-mist);
+      color: var(--spruce-teal);
       text-decoration: none;
       font-weight: 700;
     }
 
     .contact-action:hover {
-      color: var(--river-gold);
+      color: var(--spruce-hover);
+      text-decoration: underline;
     }
 
     /* Footer */
     footer {
-      background-color: var(--river-midnight);
-      color: #9FAEB5;
+      background-color: var(--river-stone);
+      color: #97A6B0;
       padding: 3rem 0;
       text-align: center;
       font-size: 0.85rem;
@@ -378,7 +379,6 @@
   </header>
 
   <main>
-    <!-- Core Principles -->
     <section>
       <div class="container">
         <h2 class="section-title">Built for Performance &amp; Simplicity</h2>
@@ -401,7 +401,6 @@
       </div>
     </section>
 
-    <!-- Packages (Deliverables only, no public pricing) -->
     <section id="packages">
       <div class="container">
         <h2 class="section-title">Service Packages</h2>
@@ -482,11 +481,10 @@
       </div>
     </section>
 
-    <!-- Contact & Inquiries -->
     <section id="contact" class="contact-section">
       <div class="container">
         <div class="contact-card">
-          <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem; color: var(--river-midnight);">Get in Touch</h2>
+          <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem; color: var(--river-stone);">Get in Touch</h2>
           <p style="color: var(--text-muted); font-size: 0.95rem;">
             Have a project in mind or need a custom quote? Reach out directly by phone, text, or email.
           </p>
@@ -502,7 +500,7 @@
             </div>
             <div class="contact-item">
               <span class="contact-label">Updates Accepted Via:</span>
-              <span style="color: var(--river-midnight); font-weight: 700;">Email &bull; Call &bull; Text</span>
+              <span style="color: var(--river-stone); font-weight: 700;">Email &bull; Call &bull; Text</span>
             </div>
           </div>
         </div>
