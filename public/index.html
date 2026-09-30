@@ -3,27 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riverbed Designs | Independent Web Infrastructure & Management</title>
-  <meta name="description" content="Durable, high-speed mobile signboards, custom digital storefronts, and hands-off web management for independent operators across the United States.">
+  <title>Riverbed Designs | Independent Digital Trade Architect</title>
+  <meta name="description" content="Custom digital signboards, verified search placement, and turnkey storefront architectures for independent trades, roadside artisans, and small businesses nationwide.">
   <style>
     :root {
-      /* Base & Surfaces */
-      --fog-base: #EDF2EE;
-      --fog-light: #F7FAF8;
-      --surface-card: #6B8E7D;
-      --border-outer: #8FA395;
-      --border-accent: #4F6D5E;
-
-      /* Typography */
-      --river-charcoal: #18231E;
-      --river-slate: #2F4037;
-      --text-muted: #52665B;
-
-      /* Dedicated Button Colors */
-      --btn-green: #2E7D47;
-      --btn-green-hover: #225C34;
-
-      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --bg-base: #E3E8EC;
+      --surface-mist: #D5DEE5;
+      --surface-card: #CBD7E2;
+      --surface-card-hover: #C3D0DC;
+      --border-accent: #2E636A;
+      --border-subtle: #BAC7D1;
+      --spruce-teal: #245258;
+      --spruce-hover: #1A3E43;
+      --text-dark: #16222A;
+      --text-muted: #4B5A65;
+      --header-cap: #D0DBE5;
     }
 
     * {
@@ -33,581 +27,571 @@
     }
 
     body {
-      background-color: var(--fog-base);
-      color: var(--river-charcoal);
-      font-family: var(--font-stack);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      background-color: var(--bg-base);
+      color: var(--text-dark);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      padding: 0 0 60px 0;
+      display: flex;
+      justify-content: center;
     }
 
     .container {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+      width: 100%;
+      max-width: 960px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
     }
 
-    /* Top Strip */
-    .top-strip {
-      background-color: var(--river-charcoal);
-      color: var(--fog-light);
+    /* Top National Corridor Strip */
+    .status-strip {
+      background-color: var(--spruce-teal);
+      border-bottom: 2px solid var(--border-accent);
+      padding: 10px 16px;
       text-align: center;
-      padding: 0.75rem 1rem;
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      font-size: 0.8rem;
       font-weight: 700;
-      border-bottom: 3px solid var(--border-accent);
-    }
-
-    /* Chevron Divider Band */
-    .river-band {
-      height: 10px;
-      background: repeating-linear-gradient(
-        45deg,
-        var(--border-accent),
-        var(--border-accent) 10px,
-        var(--river-charcoal) 10px,
-        var(--river-charcoal) 20px
-      );
-      border-bottom: 1px solid var(--border-outer);
-    }
-
-    /* Header / Hero */
-    header {
-      padding: 5rem 0 4rem;
-      text-align: center;
-      background: radial-gradient(circle at 50% 20%, #F5F9F6 0%, var(--fog-base) 100%);
-      border-bottom: 2px solid var(--border-outer);
-    }
-
-    .brand-eyebrow {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.08em;
+      color: #FFFFFF;
       text-transform: uppercase;
-      color: var(--btn-green);
-      margin-bottom: 0.75rem;
-      border-bottom: 2px solid var(--btn-green);
-      padding-bottom: 4px;
     }
 
-    h1 {
-      font-size: 3rem;
+    .content-pad {
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at 50% 30%, #EBF0F3 0%, var(--surface-mist) 100%);
+      border: 2px solid var(--border-accent);
+      border-radius: 8px;
+      padding: 40px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 6px 18px rgba(22, 34, 42, 0.06);
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: rgba(46, 99, 106, 0.12);
+      color: var(--spruce-teal);
+      border: 1px solid var(--border-accent);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      color: var(--text-dark);
       font-weight: 900;
       letter-spacing: -0.02em;
-      color: var(--river-charcoal);
-      margin-bottom: 1.25rem;
-      line-height: 1.15;
     }
 
-    .hero-lead {
+    .hero p.tagline {
+      color: var(--text-muted);
+      font-size: 1.05rem;
       max-width: 680px;
-      margin: 0 auto 2.5rem;
-      font-size: 1.15rem;
-      color: var(--river-slate);
+      margin-bottom: 20px;
       font-weight: 500;
     }
 
-    .btn-group {
+    .hero p.value-prop {
+      font-size: 0.98rem;
+      color: var(--text-dark);
+      max-width: 720px;
+      margin-bottom: 26px;
+      line-height: 1.6;
+    }
+
+    /* Primary Action Buttons */
+    .action-group {
+      width: 100%;
+      max-width: 520px;
       display: flex;
-      justify-content: center;
-      gap: 1.25rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .btn {
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 0.9rem 2rem;
-      font-size: 0.95rem;
-      font-weight: 800;
-      border-radius: 4px;
+      padding: 14px 20px;
       text-decoration: none;
-      transition: all 0.15s ease-in-out;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .btn-primary {
-      background-color: var(--btn-green);
+      border-radius: 6px;
+      background-color: var(--spruce-teal);
       color: #FFFFFF;
-      border: 2px solid var(--btn-green);
-      box-shadow: 0 4px 10px rgba(46, 125, 71, 0.25);
+      border: 1px solid var(--spruce-hover);
+      transition: background-color 0.15s ease, transform 0.1s ease;
+      box-shadow: 0 3px 8px rgba(22, 34, 42, 0.15);
     }
 
-    .btn-primary:hover {
-      background-color: var(--btn-green-hover);
-      border-color: var(--btn-green-hover);
+    .btn:hover {
+      background-color: var(--spruce-hover);
     }
 
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--river-charcoal);
-      border: 2px solid var(--river-charcoal);
+    .btn:active {
+      transform: translateY(1px);
     }
 
-    .btn-secondary:hover {
-      background-color: rgba(24, 35, 30, 0.08);
+    .btn-main-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
     }
 
-    /* Section Structure */
-    section {
-      padding: 4.5rem 0;
-      border-bottom: 2px solid var(--border-outer);
+    .btn-subtext {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #D3E0E2;
+      margin-top: 3px;
+    }
+
+    /* Geometric Chevron Divider */
+    .river-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 8px 0;
+      color: var(--border-accent);
+      opacity: 0.6;
+    }
+
+    .river-divider hr {
+      flex: 1;
+      border: none;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .section-header-block {
+      text-align: center;
+      margin-bottom: 12px;
     }
 
     .section-title {
-      font-size: 2.1rem;
-      font-weight: 900;
-      color: var(--river-charcoal);
-      text-align: center;
-      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-dark);
       letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
 
     .section-subtitle {
-      text-align: center;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 3rem;
-      font-size: 1.05rem;
-      font-weight: 500;
     }
 
-    /* Architectural 3-Pillar Row */
-    .pillar-row {
+    /* Grids & Cards */
+    .package-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.75rem;
-    }
-
-    .pillar-card {
-      background: linear-gradient(180deg, var(--fog-light) 0%, #E3EBE5 100%);
-      border: 2px solid var(--border-outer);
-      border-top: 5px solid var(--btn-green);
-      border-radius: 6px;
-      padding: 2.25rem 1.75rem;
-      box-shadow: 0 4px 12px rgba(24, 35, 30, 0.06);
-    }
-
-    .pillar-card h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--river-charcoal);
-      margin-bottom: 0.75rem;
-    }
-
-    .pillar-card p {
-      color: var(--river-slate);
-      font-size: 0.95rem;
-    }
-
-    /* Balanced 2x2 Package Grid (All Outlined Equally) */
-    .packages-grid-2x2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    @media (max-width: 820px) {
-      .packages-grid-2x2 {
-        grid-template-columns: 1fr;
-      }
+      gap: 20px;
     }
 
     .package-card {
-      background-color: var(--fog-light);
-      border: 2px solid var(--border-accent);
-      border-radius: 6px;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 6px 16px rgba(24, 35, 30, 0.08);
-      overflow: hidden;
-    }
-
-    .package-header {
       background-color: var(--surface-card);
-      border-bottom: 2px solid var(--border-accent);
-      padding: 1.25rem 1.5rem;
-    }
-
-    .package-tag {
-      font-size: 0.75rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #FFFFFF;
-      margin-bottom: 0.25rem;
-    }
-
-    .package-name {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #FFFFFF;
-    }
-
-    .package-body {
-      padding: 1.75rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .package-notice {
-      font-size: 0.88rem;
-      font-style: italic;
-      color: var(--river-slate);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px dashed var(--border-outer);
-    }
-
-    .package-features {
-      list-style: none;
-      flex-grow: 1;
-      margin-bottom: 2rem;
-    }
-
-    .package-features li {
-      font-size: 0.92rem;
-      color: var(--river-charcoal);
-      margin-bottom: 0.75rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    .package-features li::before {
-      content: "■";
-      position: absolute;
-      left: 0;
-      color: var(--btn-green);
-      font-size: 0.75rem;
-      top: 2px;
-    }
-
-    .package-cta {
-      display: block;
-      text-align: center;
-      padding: 0.8rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 800;
-      background-color: var(--btn-green);
-      color: #FFFFFF;
-      text-decoration: none;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transition: background 0.15s ease;
-    }
-
-    .package-cta:hover {
-      background-color: var(--btn-green-hover);
-    }
-
-    /* Structured Terms Callout */
-    .terms-banner {
-      margin-top: 2.5rem;
-      padding: 1.75rem 2rem;
-      background-color: #E3EBE5;
-      border: 2px solid var(--border-outer);
-      border-left: 6px solid var(--btn-green);
-      border-radius: 4px;
-    }
-
-    .terms-banner h4 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--river-charcoal);
-      margin-bottom: 0.4rem;
-    }
-
-    .terms-banner p {
-      font-size: 0.92rem;
-      color: var(--river-slate);
-    }
-
-    /* Contact Block */
-    .contact-container {
-      max-width: 650px;
-      margin: 0 auto;
-      background-color: var(--fog-light);
       border: 2px solid var(--border-accent);
-      border-radius: 6px;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 6px 16px rgba(24, 35, 30, 0.08);
-      text-align: center;
-    }
-
-    .contact-container h2 {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--river-charcoal);
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-container p {
-      color: var(--river-slate);
-      font-size: 0.95rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .contact-rows {
+      border-radius: 8px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      text-align: left;
+      box-shadow: 0 4px 12px rgba(22, 34, 42, 0.05);
+      transition: transform 0.15s ease, background-color 0.15s ease;
     }
 
-    .contact-row {
+    .package-card:hover {
+      background-color: var(--surface-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .package-header-cap {
+      background-color: var(--header-cap);
+      border-bottom: 2px solid var(--border-accent);
+      padding: 14px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.9rem 1.25rem;
-      background-color: #E3EBE5;
-      border: 1px solid var(--border-outer);
-      border-radius: 4px;
-      font-size: 0.95rem;
     }
 
-    .contact-label {
+    .package-tier-label {
+      font-size: 0.75rem;
       font-weight: 800;
-      color: var(--river-charcoal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--spruce-teal);
     }
 
-    .contact-val {
-      color: var(--btn-green);
-      text-decoration: none;
+    .package-body {
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 14px;
+    }
+
+    .package-body h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.3;
+    }
+
+    .package-body p.desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .inclusions-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 6px;
+      flex-grow: 1;
+    }
+
+    .inclusions-list li {
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .inclusions-list li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      fill: var(--spruce-teal);
+    }
+
+    .package-card-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 12px 18px;
+      background-color: rgba(255, 255, 255, 0.3);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--spruce-teal);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Add-Ons Section */
+    .addon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .addon-card {
+      background-color: var(--surface-mist);
+      border: 2px dashed var(--border-accent);
+      border-radius: 8px;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .addon-card h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .addon-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Operational Retainer Notice */
+    .retainer-card {
+      background-color: var(--surface-mist);
+      border: 1px solid var(--border-accent);
+      border-left: 6px solid var(--spruce-teal);
+      border-radius: 6px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .retainer-card h3 {
+      font-size: 1.05rem;
+      color: var(--text-dark);
       font-weight: 800;
     }
 
-    .contact-val:hover {
-      text-decoration: underline;
+    .retainer-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* Footer */
     footer {
-      background-color: var(--river-charcoal);
-      color: #9DB0BD;
-      padding: 3.5rem 0;
+      border-top: 2px solid var(--border-subtle);
+      padding-top: 24px;
       text-align: center;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .footer-brand {
-      color: #FFFFFF;
-      font-weight: 800;
-      font-size: 1.1rem;
-      margin-bottom: 0.35rem;
+      font-weight: 700;
+      color: var(--text-dark);
     }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      .contact-row { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+    .icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Strip -->
-  <div class="top-strip">
-    Independent Web Infrastructure &bull; Serving Clients Nationwide
+  <div class="container">
+    
+    <!-- Top Status Banner -->
+    <div class="status-strip">
+      Riverbed Designs • Digital Infrastructure &amp; Search Placement • Nationwide Service
+    </div>
+
+    <div class="content-pad">
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="badge">Independent Web Architecture</div>
+        <h1>Digital Storefronts Built for Independent Trade</h1>
+        <p class="tagline">Mobile signboards, high-visibility search listings, and turnkey checkout systems crafted for operators who run real shops.</p>
+        
+        <p class="value-prop">
+          Most websites are slow, bloated, and broken on mobile phones. Riverbed Designs builds fast, clean digital storefronts that put verified hours, instant one-tap contact, clear directions, and secure payment processing directly in front of your customers.
+        </p>
+
+        <!-- Direct Inquiry Actions -->
+        <div class="action-group">
+          <a href="tel:7076797975" class="btn">
+            <div class="btn-main-row">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>Call (707) 679-7975</span>
+            </div>
+            <span class="btn-subtext">Direct consultation &amp; custom quotes</span>
+          </a>
+
+          <a href="mailto:deeplyrootedriverbeddesigns@gmail.com" class="btn">
+            <div class="btn-main-row">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>Email Riverbed Designs</span>
+            </div>
+            <span class="btn-subtext">deeplyrootedriverbeddesigns@gmail.com</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Chevron Divider -->
+      <div class="river-divider">
+        <hr>
+        <span>✦ ✦ ✦</span>
+        <hr>
+      </div>
+
+      <!-- Core Service Packages Section -->
+      <section>
+        <div class="section-header-block">
+          <h2 class="section-title">Standard Service Deployments</h2>
+          <p class="section-subtitle">Turnkey digital architecture tailored to your business model. Inquire for scope pricing.</p>
+        </div>
+
+        <div class="package-grid">
+
+          <!-- Package 1 -->
+          <div class="package-card">
+            <div class="package-header-cap">
+              <span class="package-tier-label">Tier 01</span>
+              <span>⚡ Fast Launch</span>
+            </div>
+            <div class="package-body">
+              <h3>The Turnkey Signboard</h3>
+              <p class="desc">A lightweight, high-speed mobile presence designed to get drive-by and search traffic straight to your door.</p>
+              <ul class="inclusions-list">
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Mobile-optimized custom website build</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Visual wayfinding &amp; access graphic</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Heritage &amp; mission story section</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Direct one-touch tap-to-call button</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Verified Google Profile &amp; Maps link</li>
+              </ul>
+            </div>
+            <div class="package-card-footer">Pay-As-You-Go Updates</div>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="package-card">
+            <div class="package-header-cap">
+              <span class="package-tier-label">Tier 02</span>
+              <span>🛡 Managed Care</span>
+            </div>
+            <div class="package-body">
+              <h3>The Signboard + Annual Care</h3>
+              <p class="desc">Our foundational signboard build paired with ongoing, priority digital management all year long.</p>
+              <ul class="inclusions-list">
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Everything in Package 1</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Unlimited hours, schedule &amp; text updates</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Annual domain renewal covered &amp; managed</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Priority call, text, or email support</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Guaranteed 24–48hr turnaround</li>
+              </ul>
+            </div>
+            <div class="package-card-footer">Annual or Monthly Retainer</div>
+          </div>
+
+          <!-- Package 3 -->
+          <div class="package-card">
+            <div class="package-header-cap">
+              <span class="package-tier-label">Tier 03</span>
+              <span>📷 Showcase</span>
+            </div>
+            <div class="package-body">
+              <h3>Full Media &amp; Care</h3>
+              <p class="desc">Combines full web development and digital care with a complete 14-item visual showcase.</p>
+              <ul class="inclusions-list">
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Everything in Package 1</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 14 professional showcase items prepared</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 12 custom product or service descriptions</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Unlimited text &amp; operational updates</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Annual domain renewal managed</li>
+              </ul>
+            </div>
+            <div class="package-card-footer">Annual or Monthly Retainer</div>
+          </div>
+
+          <!-- Package 4 -->
+          <div class="package-card">
+            <div class="package-header-cap">
+              <span class="package-tier-label">Tier 04</span>
+              <span>🔍 Local Search</span>
+            </div>
+            <div class="package-body">
+              <h3>Digital Storefront &amp; Search Engine</h3>
+              <p class="desc">Engineered for search placement. Complete Google Maps synchronization and direct post management.</p>
+              <ul class="inclusions-list">
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Everything in Package 3</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Full Google Business Profile optimization</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> High-resolution media direct upload to Maps</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Direct seasonal updates posted to Google</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Customer review monitoring &amp; guidance</li>
+              </ul>
+            </div>
+            <div class="package-card-footer">Annual or Monthly Retainer</div>
+          </div>
+
+          <!-- Package 5 -->
+          <div class="package-card" style="grid-column: 1 / -1;">
+            <div class="package-header-cap">
+              <span class="package-tier-label">Tier 05</span>
+              <span>🛒 Full Commerce &amp; Legal Compliance</span>
+            </div>
+            <div class="package-body">
+              <h3>The Complete Enterprise E-Commerce Build</h3>
+              <p class="desc">Turnkey online merchant infrastructure engineered for shipping products, handling deposits, and maintaining full regulatory and payment processor compliance.</p>
+              <ul class="inclusions-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px;">
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Complete custom website, wayfinding &amp; branding</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Turnkey Payment Gateway (Stripe, Square, or PayPal)</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Automated payout routing &amp; live shipping rules</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 3 Storefront Policies: Terms of Sale, Refund, Privacy</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Independent Commercial Attorney Review Included</li>
+                <li><svg class="icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Full Google Business Profile verification &amp; SEO</li>
+              </ul>
+            </div>
+            <div class="package-card-footer">Complete Turnkey Commercial Architecture</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Chevron Divider -->
+      <div class="river-divider">
+        <hr>
+        <span>✦ ✦ ✦</span>
+        <hr>
+      </div>
+
+      <!-- Add-Ons Section -->
+      <section>
+        <div class="section-header-block">
+          <h2 class="section-title">Modular E-Commerce &amp; Compliance Add-Ons</h2>
+          <p class="section-subtitle">Extend Packages 1–4 with secure payments and attorney-reviewed storefront agreements.</p>
+        </div>
+
+        <div class="addon-grid">
+          
+          <div class="addon-card">
+            <h4>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M19 14V6c0-1.1-.9-2-2-2H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-2 0H3V6h14v8zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm13 4v9c0 1.1-.9 2-2 2H5v-2h15v-9h2z"/></svg>
+              Simple Deposit &amp; Booking Integration
+            </h4>
+            <p>Perfect for service providers and appointments. Integrates a dedicated checkout link (Square or Stripe) paired with a custom-drafted, attorney-reviewed cancellation and booking deposit agreement.</p>
+          </div>
+
+          <div class="addon-card">
+            <h4>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+              Full Turnkey E-Commerce &amp; Store Policies
+            </h4>
+            <p>Converts any signboard into a selling storefront. Full catalog checkout setup, tax and shipping configuration, plus three dedicated storefront legal documents with legal counsel sign-off.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Operational Care / Inquiries -->
+      <section class="retainer-card">
+        <h3>Operational Updates &amp; Retainer Management</h3>
+        <p>
+          We do not leave you stranded with complicated web dashboards. When operating hours change, seasonal notices need posting, or new inventory arrives, updates are submitted directly via <strong>email, phone call, or text</strong> and posted to your live site within 24 to 48 hours.
+        </p>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p class="footer-brand">Riverbed Designs</p>
+        <p>An Initiative of Deeply Rooted Enterprises</p>
+        <p style="font-size: 0.78rem; margin-top: 4px;">Serving independent businesses, trades, and artisans nationwide.</p>
+      </footer>
+
+    </div>
   </div>
 
-  <div class="river-band"></div>
-
-  <!-- Hero Header -->
-  <header>
-    <div class="container">
-      <div class="brand-eyebrow">Deeply Rooted Enterprises</div>
-      <h1>Riverbed Designs</h1>
-      <p class="hero-lead">
-        Durable, high-speed mobile signboards, custom digital storefronts, and hands-off web infrastructure for independent trades, craftsmen, and small operators across the United States.
-      </p>
-      <div class="btn-group">
-        <a href="#packages" class="btn btn-primary">Review Service Packages</a>
-        <a href="#contact" class="btn btn-secondary">Request an Estimate</a>
-      </div>
-    </div>
-  </header>
-
-  <div class="river-band"></div>
-
-  <main>
-    <!-- Architectural Principles -->
-    <section>
-      <div class="container">
-        <h2 class="section-title">Built for Performance &amp; Simplicity</h2>
-        <p class="section-subtitle">Websites engineered for maximum speed, clean readability, and zero technical overhead.</p>
-        
-        <div class="pillar-row">
-          <div class="pillar-card">
-            <h3>Sub-Second Edge Speeds</h3>
-            <p>Clean, static architecture running directly on edge infrastructure. Fast page delivery anywhere, even on weak one-bar mobile reception.</p>
-          </div>
-          <div class="pillar-card">
-            <h3>Direct Customer Action</h3>
-            <p>Engineered for how people search on mobile: one-tap telephone calls, quick text inquiries, clear service scopes, and accurate map verification.</p>
-          </div>
-          <div class="pillar-card">
-            <h3>Zero-Hassle Care</h3>
-            <p>No backend software to update, no plugins to break, and no hosting bills. Operating hours and website changes are handled directly for you by email, text, or phone.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Balanced 2x2 Packages Grid -->
-    <section id="packages">
-      <div class="container">
-        <h2 class="section-title">Service Packages</h2>
-        <p class="section-subtitle">Every project is quoted directly to match trade specifications and inventory scale.</p>
-
-        <div class="packages-grid-2x2">
-          
-          <!-- Card 1: Turnkey Signboard -->
-          <div class="package-card">
-            <div class="package-header">
-              <div class="package-tag">Package 01</div>
-              <div class="package-name">Turnkey Signboard</div>
-            </div>
-            <div class="package-body">
-              <div class="package-notice">Custom setup build • Pay-as-you-go modifications</div>
-              <ul class="package-features">
-                <li>Custom mobile-optimized website build</li>
-                <li>Clear service, trade, or product breakdown</li>
-                <li>One-tap customer calling and text routing</li>
-                <li>Google Maps &amp; search listing linkage</li>
-                <li>Custom domain configuration</li>
-                <li>Zero ongoing hosting overhead</li>
-              </ul>
-              <a href="#contact" class="package-cta">Inquire for Estimate</a>
-            </div>
-          </div>
-
-          <!-- Card 2: Signboard + Care -->
-          <div class="package-card">
-            <div class="package-header">
-              <div class="package-tag">Package 02</div>
-              <div class="package-name">Signboard + Care</div>
-            </div>
-            <div class="package-body">
-              <div class="package-notice">Setup build + Annual maintenance retainer</div>
-              <ul class="package-features">
-                <li>Everything included in Turnkey Signboard</li>
-                <li>Full 12 months ongoing technical management</li>
-                <li>Unlimited hours, schedule, and announcement edits</li>
-                <li>Annual domain renewal fee covered and managed</li>
-                <li>Direct update priority via email, text, or call</li>
-                <li>Continuous uptime monitoring and link checks</li>
-              </ul>
-              <a href="#contact" class="package-cta">Inquire for Estimate</a>
-            </div>
-          </div>
-
-          <!-- Card 3: Media & Care -->
-          <div class="package-card">
-            <div class="package-header">
-              <div class="package-tag">Package 03</div>
-              <div class="package-name">Media &amp; Care</div>
-            </div>
-            <div class="package-body">
-              <div class="package-notice">On-site media production + Full annual care</div>
-              <ul class="package-features">
-                <li>Everything included in Signboard + Care</li>
-                <li>Custom product and trade photography</li>
-                <li>Written product descriptions and craft copy</li>
-                <li>Dedicated business tradition and story section</li>
-                <li>Unlimited content updates all year long</li>
-                <li>Annual domain renewal covered and managed</li>
-              </ul>
-              <a href="#contact" class="package-cta">Inquire for Estimate</a>
-            </div>
-          </div>
-
-          <!-- Card 4: Digital Storefront -->
-          <div class="package-card">
-            <div class="package-header">
-              <div class="package-tag">Package 04</div>
-              <div class="package-name">Digital Storefront</div>
-            </div>
-            <div class="package-body">
-              <div class="package-notice">Search presence + Full ongoing profile management</div>
-              <ul class="package-features">
-                <li>Everything included in Media &amp; Care</li>
-                <li>Complete Google Business Profile optimization</li>
-                <li>Direct high-resolution photo uploads to Google Maps</li>
-                <li>Seasonal announcements posted directly to search</li>
-                <li>Review monitoring and guidance</li>
-                <li>Discounted rates for future product additions</li>
-              </ul>
-              <a href="#contact" class="package-cta">Inquire for Estimate</a>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="terms-banner">
-          <h4>Flexible Build &amp; Estimate Terms</h4>
-          <p>
-            Because build scopes, photography needs, and project complexity vary, rates are quoted directly based on individual operator needs. Retainer clients may submit seasonal schedule adjustments, announcements, and content updates anytime via direct email, text, or phone. Package offerings and terms are subject to adjustment based on custom specifications.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Direct Contact Block -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-container">
-          <h2>Get in Touch</h2>
-          <p>Reach out directly to discuss your project or request a custom quote.</p>
-
-          <div class="contact-rows">
-            <div class="contact-row">
-              <span class="contact-label">Email Inquiries:</span>
-              <a href="mailto:deeplyrootedriverbeddesigns@gmail.com" class="contact-val">deeplyrootedriverbeddesigns@gmail.com</a>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">Call or Text:</span>
-              <a href="tel:7076797975" class="contact-val">(707) 679-7975</a>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">Updates Accepted Via:</span>
-              <span style="color: var(--river-charcoal); font-weight: 800;">Email &bull; Call &bull; Text</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-<!-- Geometric Mist Band -->
-  <div class="river-band"></div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-brand">Riverbed Designs</div>
-      <p>An Initiative of Deeply Rooted Enterprises</p>
-      
-      <!-- Tax Exemption & Electronic Scope Line -->
-      <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #8FA3AD;">
-        Durable Web Infrastructure &bull; Nationwide Client Services &bull; Delivered Electronically
-      </p>
-
-      <!-- Stripe & Non-Refundable Deposit Compliance Line -->
-      <p style="margin-top: 0.35rem; font-size: 0.8rem; color: #8FA3AD;">
-        Deposits are non-refundable once design and development commence. Payments processed securely via Stripe.
-      </p>
-
-      <!-- Clean Legal Links -->
-     <p style="margin-top: 0.85rem; font-size: 0.82rem;">
-  <a href="/terms.html" style="color: #BAC7D1; text-decoration: underline; margin: 0 8px;">Terms &amp; Conditions</a> | 
-  <a href="/ai-disclaimer.html" style="color: #BAC7D1; text-decoration: underline; margin: 0 8px;">AI Use Disclaimer</a> | 
-  <a href="/privacy.html" style="color: #BAC7D1; text-decoration: underline; margin: 0 8px;">Privacy Policy</a> | 
-  <a href="/refund.html" style="color: #BAC7D1; text-decoration: underline; margin: 0 8px;">Refund Policy</a>
-</p>
-    </div>
-  </footer>
+</body>
+</html>
+     
