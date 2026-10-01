@@ -390,20 +390,124 @@
       line-height: 1.5;
     }
 
-    footer {
-      border-top: 2px solid var(--border-subtle);
-      padding-top: 24px;
+    /* Contact Section */
+    .contact-container {
+      background-color: var(--surface-card);
+      border: 2px solid var(--border-accent);
+      border-radius: 8px;
+      padding: 28px 24px;
       text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+      box-shadow: 0 4px 12px rgba(22, 34, 42, 0.05);
     }
 
-    .footer-brand {
-      font-weight: 700;
+    .contact-container h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
       color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .contact-container p.contact-sub {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background-color: var(--surface-mist);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      font-size: 0.92rem;
+    }
+
+    .contact-label {
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .contact-val {
+      color: var(--spruce-teal);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .contact-val:hover {
+      text-decoration: underline;
+    }
+
+    /* River Band Divider */
+    .river-band {
+      height: 10px;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--spruce-teal),
+        var(--spruce-teal) 10px,
+        var(--text-dark) 10px,
+        var(--text-dark) 20px
+      );
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      margin-top: 24px;
+    }
+
+    /* Solid Dark Footer with Legal Links */
+    footer.site-footer {
+      background-color: var(--text-dark);
+      color: #9DB0BD;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 3px solid var(--border-accent);
+      border-radius: 0 0 8px 8px;
+    }
+
+    footer.site-footer .footer-brand {
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    footer.site-footer p {
+      font-size: 0.85rem;
+      color: #9DB0BD;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 20px 0 12px 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-legal-links a {
+      color: #BAC7D1;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    .footer-legal-links a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
+    .footer-legal-links span {
+      color: #4B5A65;
     }
 
     .icon {
@@ -547,7 +651,7 @@
             <div class="package-card-footer">Annual or Monthly Retainer</div>
           </div>
 
-          <!-- Row 3, Columns 1 & 2 (Spans Width): Package 5 -->
+          <!-- Row 3, Columns 1 & 2: Package 5 -->
           <div class="package-card card-p5">
             <div class="package-header-cap">
               <span class="package-tier-label">Tier 05</span>
@@ -613,17 +717,56 @@
         </p>
       </section>
 
-      <!-- Footer -->
-      <footer>
-        <p class="footer-brand">Riverbed Designs</p>
-        <p>An Initiative of Deeply Rooted Enterprises</p>
-        <p style="font-size: 0.78rem; margin-top: 4px;">Serving independent businesses, trades, and artisans nationwide.</p>
-      </footer>
+      <!-- Direct Contact Section -->
+      <section id="contact">
+        <div class="contact-container">
+          <h2>Get in Touch</h2>
+          <p class="contact-sub">Reach out directly to discuss your project or request a custom quote.</p>
 
-    </div>
-  </div>
+          <div class="contact-rows">
+            <div class="contact-row">
+              <span class="contact-label">Email Inquiries:</span>
+              <a href="mailto:deeplyrootedriverbeddesigns@gmail.com" class="contact-val">deeplyrootedriverbeddesigns@gmail.com</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">Call or Text:</span>
+              <a href="tel:7076797975" class="contact-val">(707) 679-7975</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">Updates Accepted Via:</span>
+              <span style="color: var(--text-dark); font-weight: 800;">Email &bull; Call &bull; Text</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- End content-pad -->
+
+    <!-- Geometric River Band -->
+    <div class="river-band"></div>
+
+    <!-- Solid Dark Footer with Restored Legal Links -->
+    <footer class="site-footer">
+      <div class="footer-brand">Riverbed Designs</div>
+      <p>An Initiative of Deeply Rooted Enterprises</p>
+      
+      <!-- Restored Policy Links -->
+      <div class="footer-legal-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <span>&bull;</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="refunds.html">Refund Policy</a>
+        <span>&bull;</span>
+        <a href="disclaimer.html">AI &amp; Tech Disclaimer</a>
+      </div>
+
+      <p style="margin-top: 12px; font-size: 0.8rem; color: #7F929F;">
+        Durable Web Infrastructure &bull; Nationwide Client Services &bull; Delivered Electronically
+      </p>
+    </footer>
+
+  </div><!-- End container -->
 
 </body>
 </html>
-
-         
