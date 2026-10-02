@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Riverbed Designs | Independent Digital Trade Architect</title>
   <meta name="description" content="Custom digital signboards, verified search placement, and turnkey storefront architectures for independent trades, roadside artisans, and small businesses nationwide.">
-  <style>
-    <!-- Canonical & Social Previews (OpenGraph / Twitter) -->
+
+  <!-- OpenGraph & Social Previews -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Riverbed Designs">
   <meta property="og:title" content="Riverbed Designs | Independent Digital Trade Architect">
   <meta property="og:description" content="Custom digital signboards, verified search placement, and turnkey storefront architectures for independent trades and small businesses nationwide.">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Riverbed Designs | Independent Digital Trade Architect">
-  <meta name="twitter:description" content="Custom digital signboards, verified search placement, and turnkey storefront architectures for independent trades and small businesses nationwide.">
 
   <!-- Geographic Location Tags -->
   <meta name="geo.region" content="US-CA">
   <meta name="geo.placename" content="Klamath, California">
 
-  <!-- AI & Search Engine Structured Data (Schema.org JSON-LD) -->
+  <!-- Search Engine & AI Structured Data (Schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,62 +46,23 @@
         "@type": "AdministrativeArea",
         "name": "Del Norte County, CA"
       }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Digital Architecture Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "The Turnkey Signboard"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "The Signboard + Annual Care"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Full Media & Care"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Digital Storefront & Search Engine"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "The Complete Enterprise E-Commerce Build"
-          }
-        }
-      ]
-    }
+    ]
   }
   </script>
+
+  <style>
     :root {
-      --bg-base: #E3E8EC;
-      --surface-mist: #D5DEE5;
-      --surface-card: #CBD7E2;
-      --surface-card-hover: #C3D0DC;
-      --border-accent: #2E636A;
-      --border-subtle: #BAC7D1;
-      --spruce-teal: #245258;
-      --spruce-hover: #1A3E43;
-      --text-dark: #16222A;
-      --text-muted: #4B5A65;
-      --header-cap: #D0DBE5;
+      --fog-base: #EDF2EE;
+      --fog-light: #F7FAF8;
+      --surface-card: #6B8E7D;
+      --border-outer: #8FA395;
+      --border-accent: #4F6D5E;
+      --river-charcoal: #18231E;
+      --river-slate: #2F4037;
+      --text-muted: #52665B;
+      --btn-green: #2E7D47;
+      --btn-green-hover: #225C34;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     * {
@@ -113,10 +72,11 @@
     }
 
     body {
-      background-color: var(--bg-base);
-      color: var(--text-dark);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.5;
+      background-color: var(--fog-base);
+      color: var(--river-charcoal);
+      font-family: var(--font-stack);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
       padding: 0 0 60px 0;
       display: flex;
       justify-content: center;
@@ -130,16 +90,16 @@
       gap: 32px;
     }
 
-    .status-strip {
-      background-color: var(--spruce-teal);
-      border-bottom: 2px solid var(--border-accent);
-      padding: 10px 16px;
+    .top-strip {
+      background-color: var(--river-charcoal);
+      color: var(--fog-light);
       text-align: center;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: #FFFFFF;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 3px solid var(--border-accent);
     }
 
     .content-pad {
@@ -150,7 +110,7 @@
     }
 
     .hero {
-      background: radial-gradient(circle at 50% 30%, #EBF0F3 0%, var(--surface-mist) 100%);
+      background: radial-gradient(circle at 50% 20%, #F5F9F6 0%, var(--fog-base) 100%);
       border: 2px solid var(--border-accent);
       border-radius: 8px;
       padding: 40px 24px;
@@ -158,34 +118,32 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 6px 18px rgba(22, 34, 42, 0.06);
+      box-shadow: 0 6px 18px rgba(24, 35, 30, 0.06);
     }
 
-    .badge {
+    .brand-eyebrow {
       display: inline-block;
-      background-color: rgba(46, 99, 106, 0.12);
-      color: var(--spruce-teal);
-      border: 1px solid var(--border-accent);
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       font-weight: 800;
-      letter-spacing: 0.06em;
-      margin-bottom: 16px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
+      color: var(--btn-green);
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid var(--btn-green);
+      padding-bottom: 4px;
     }
 
     .hero h1 {
       font-size: 2.2rem;
       line-height: 1.2;
       margin-bottom: 10px;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       font-weight: 900;
       letter-spacing: -0.02em;
     }
 
     .hero p.tagline {
-      color: var(--text-muted);
+      color: var(--river-slate);
       font-size: 1.05rem;
       max-width: 680px;
       margin-bottom: 20px;
@@ -194,7 +152,7 @@
 
     .hero p.value-prop {
       font-size: 0.98rem;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       max-width: 720px;
       margin-bottom: 26px;
       line-height: 1.6;
@@ -216,15 +174,15 @@
       padding: 14px 20px;
       text-decoration: none;
       border-radius: 6px;
-      background-color: var(--spruce-teal);
-      color: #FFFFFF;
-      border: 1px solid var(--spruce-hover);
+      background-color: var(--btn-green);
+      color: #FFFFFF !important;
+      border: 1px solid var(--btn-green-hover);
       transition: background-color 0.15s ease, transform 0.1s ease;
-      box-shadow: 0 3px 8px rgba(22, 34, 42, 0.15);
+      box-shadow: 0 3px 8px rgba(24, 35, 30, 0.15);
     }
 
     .btn:hover {
-      background-color: var(--spruce-hover);
+      background-color: var(--btn-green-hover);
     }
 
     .btn:active {
@@ -261,7 +219,7 @@
     .river-divider hr {
       flex: 1;
       border: none;
-      border-top: 1px solid var(--border-subtle);
+      border-top: 1px solid var(--border-outer);
     }
 
     .section-header-block {
@@ -272,7 +230,7 @@
     .section-title {
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       letter-spacing: -0.01em;
       margin-bottom: 6px;
     }
@@ -282,7 +240,7 @@
       color: var(--text-muted);
     }
 
-    /* Fixed 2, 2, 1 Grid Engine */
+    /* 2, 2, 1 Grid Engine */
     .package-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -327,28 +285,29 @@
     }
 
     .package-card {
-      background-color: var(--surface-card);
+      background-color: var(--fog-light);
       border: 2px solid var(--border-accent);
       border-radius: 8px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 4px 12px rgba(22, 34, 42, 0.05);
+      box-shadow: 0 4px 12px rgba(24, 35, 30, 0.05);
       transition: transform 0.15s ease, background-color 0.15s ease;
     }
 
     .package-card:hover {
-      background-color: var(--surface-card-hover);
+      background-color: #FFFFFF;
       transform: translateY(-2px);
     }
 
     .package-header-cap {
-      background-color: var(--header-cap);
+      background-color: var(--surface-card);
       border-bottom: 2px solid var(--border-accent);
       padding: 14px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: #FFFFFF;
     }
 
     .package-tier-label {
@@ -356,7 +315,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--spruce-teal);
+      color: #FFFFFF;
     }
 
     .package-body {
@@ -370,13 +329,13 @@
     .package-body h3 {
       font-size: 1.15rem;
       font-weight: 800;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       line-height: 1.3;
     }
 
     .package-body p.desc {
       font-size: 0.9rem;
-      color: var(--text-muted);
+      color: var(--river-slate);
       line-height: 1.45;
     }
 
@@ -391,7 +350,7 @@
 
     .inclusions-list li {
       font-size: 0.85rem;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       display: flex;
       align-items: flex-start;
       gap: 8px;
@@ -401,16 +360,16 @@
     .inclusions-list li svg {
       flex-shrink: 0;
       margin-top: 3px;
-      fill: var(--spruce-teal);
+      fill: var(--btn-green);
     }
 
     .package-card-footer {
-      border-top: 1px solid var(--border-subtle);
+      border-top: 1px solid var(--border-outer);
       padding: 12px 18px;
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.4);
       font-size: 0.8rem;
       font-weight: 700;
-      color: var(--spruce-teal);
+      color: var(--btn-green);
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -429,7 +388,7 @@
     }
 
     .addon-card {
-      background-color: var(--surface-mist);
+      background-color: var(--fog-light);
       border: 2px dashed var(--border-accent);
       border-radius: 8px;
       padding: 22px 20px;
@@ -441,7 +400,7 @@
     .addon-card h4 {
       font-size: 1.05rem;
       font-weight: 800;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -449,14 +408,14 @@
 
     .addon-card p {
       font-size: 0.88rem;
-      color: var(--text-muted);
+      color: var(--river-slate);
       line-height: 1.45;
     }
 
     .retainer-card {
-      background-color: var(--surface-mist);
-      border: 1px solid var(--border-accent);
-      border-left: 6px solid var(--spruce-teal);
+      background-color: #E3EBE5;
+      border: 1px solid var(--border-outer);
+      border-left: 6px solid var(--btn-green);
       border-radius: 6px;
       padding: 20px;
       display: flex;
@@ -466,35 +425,34 @@
 
     .retainer-card h3 {
       font-size: 1.05rem;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       font-weight: 800;
     }
 
     .retainer-card p {
       font-size: 0.9rem;
-      color: var(--text-muted);
+      color: var(--river-slate);
       line-height: 1.5;
     }
 
-    /* Contact Section */
     .contact-container {
-      background-color: var(--surface-card);
+      background-color: var(--fog-light);
       border: 2px solid var(--border-accent);
       border-radius: 8px;
       padding: 28px 24px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(22, 34, 42, 0.05);
+      box-shadow: 0 4px 12px rgba(24, 35, 30, 0.05);
     }
 
     .contact-container h2 {
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
       margin-bottom: 6px;
     }
 
     .contact-container p.contact-sub {
-      color: var(--text-muted);
+      color: var(--river-slate);
       font-size: 0.92rem;
       margin-bottom: 20px;
     }
@@ -511,19 +469,19 @@
       justify-content: space-between;
       align-items: center;
       padding: 12px 16px;
-      background-color: var(--surface-mist);
-      border: 1px solid var(--border-subtle);
+      background-color: #E3EBE5;
+      border: 1px solid var(--border-outer);
       border-radius: 6px;
       font-size: 0.92rem;
     }
 
     .contact-label {
       font-weight: 800;
-      color: var(--text-dark);
+      color: var(--river-charcoal);
     }
 
     .contact-val {
-      color: var(--spruce-teal);
+      color: var(--btn-green);
       text-decoration: none;
       font-weight: 800;
     }
@@ -532,24 +490,22 @@
       text-decoration: underline;
     }
 
-    /* River Band Divider */
     .river-band {
       height: 10px;
       background: repeating-linear-gradient(
         45deg,
-        var(--spruce-teal),
-        var(--spruce-teal) 10px,
-        var(--text-dark) 10px,
-        var(--text-dark) 20px
+        var(--border-accent),
+        var(--border-accent) 10px,
+        var(--river-charcoal) 10px,
+        var(--river-charcoal) 20px
       );
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
+      border-top: 1px solid var(--border-outer);
+      border-bottom: 1px solid var(--border-outer);
       margin-top: 24px;
     }
 
-    /* Complete Dark Footer */
     footer.site-footer {
-      background-color: var(--text-dark);
+      background-color: var(--river-charcoal);
       color: #9DB0BD;
       padding: 40px 20px 32px;
       text-align: center;
@@ -594,27 +550,27 @@
     }
 
     .footer-legal-links span {
-      color: #4B5A65;
+      color: #52665B;
     }
 
     .footer-notice-1 {
       margin-top: 14px;
       font-size: 0.82rem;
-      color: #8FA3AD;
+      color: #8FA395;
       line-height: 1.5;
     }
 
     .footer-notice-2 {
       margin-top: 6px;
       font-size: 0.8rem;
-      color: #8FA3AD;
+      color: #8FA395;
       line-height: 1.5;
     }
 
     .footer-copy {
       margin-top: 14px;
       font-size: 0.75rem;
-      color: #586774;
+      color: #52665B;
     }
 
     .icon {
@@ -628,14 +584,14 @@
 
   <div class="container">
     
-    <div class="status-strip">
-      Riverbed Designs • Digital Infrastructure &amp; Search Placement • Nationwide Service
+    <div class="top-strip">
+      Riverbed Designs &bull; Digital Infrastructure &bull; Serving Clients Nationwide
     </div>
 
     <div class="content-pad">
 
       <section class="hero">
-        <div class="badge">Independent Web Architecture</div>
+        <div class="brand-eyebrow">Deeply Rooted Enterprises</div>
         <h1>Digital Storefronts Built for Independent Trade</h1>
         <p class="tagline">Mobile signboards, high-visibility search listings, and turnkey checkout systems crafted for operators who run real shops.</p>
         
@@ -668,7 +624,7 @@
         <hr>
       </div>
 
-      <!-- Packages Section: Explicit 2, 2, 1 Grid -->
+      <!-- Packages Section -->
       <section>
         <div class="section-header-block">
           <h2 class="section-title">Standard Service Deployments</h2>
@@ -680,7 +636,7 @@
           <!-- Row 1, Column 1: Package 1 -->
           <div class="package-card card-p1">
             <div class="package-header-cap">
-              <span class="package-tier-label">Tier 01</span>
+              <span class="package-tier-label">Package 01</span>
               <span>⚡ Fast Launch</span>
             </div>
             <div class="package-body">
@@ -701,7 +657,7 @@
           <!-- Row 1, Column 2: Package 2 -->
           <div class="package-card card-p2">
             <div class="package-header-cap">
-              <span class="package-tier-label">Tier 02</span>
+              <span class="package-tier-label">Package 02</span>
               <span>🛡 Managed Care</span>
             </div>
             <div class="package-body">
@@ -721,7 +677,7 @@
           <!-- Row 2, Column 1: Package 3 -->
           <div class="package-card card-p3">
             <div class="package-header-cap">
-              <span class="package-tier-label">Tier 03</span>
+              <span class="package-tier-label">Package 03</span>
               <span>📷 Showcase</span>
             </div>
             <div class="package-body">
@@ -741,7 +697,7 @@
           <!-- Row 2, Column 2: Package 4 -->
           <div class="package-card card-p4">
             <div class="package-header-cap">
-              <span class="package-tier-label">Tier 04</span>
+              <span class="package-tier-label">Package 04</span>
               <span>🔍 Local Search</span>
             </div>
             <div class="package-body">
@@ -761,7 +717,7 @@
           <!-- Row 3, Columns 1 & 2: Package 5 -->
           <div class="package-card card-p5">
             <div class="package-header-cap">
-              <span class="package-tier-label">Tier 05</span>
+              <span class="package-tier-label">Package 05</span>
               <span>🛒 Full Commerce &amp; Legal Compliance</span>
             </div>
             <div class="package-body">
@@ -824,7 +780,7 @@
         </p>
       </section>
 
-      <!-- Direct Contact Section -->
+      <!-- Contact Section -->
       <section id="contact">
         <div class="contact-container">
           <h2>Get in Touch</h2>
@@ -841,7 +797,7 @@
             </div>
             <div class="contact-row">
               <span class="contact-label">Updates Accepted Via:</span>
-              <span style="color: var(--text-dark); font-weight: 800;">Email &bull; Call &bull; Text</span>
+              <span style="color: var(--river-charcoal); font-weight: 800;">Email &bull; Call &bull; Text</span>
             </div>
           </div>
         </div>
@@ -849,7 +805,7 @@
 
     </div><!-- End content-pad -->
 
-    <!-- Geometric River Band -->
+    <!-- Chevron River Band -->
     <div class="river-band"></div>
 
     <!-- Complete Site Footer -->
@@ -875,7 +831,7 @@
 
       <!-- Statement 2: Stripe & Deposit Compliance Declaration -->
       <p class="footer-notice-2">
-        Deposits are non-refundable once design and development commence. Payments processed securely via Stripe.
+      Deposits are non-refundable once design and development commence. Payments processed securely via Stripe.
       </p>
 
       <!-- Copyright Notice -->
@@ -888,4 +844,3 @@
 
 </body>
 </html>
-  
